@@ -3,9 +3,17 @@
 ![deployment](deployments.png)
 
 # Задание 2: Просмотр логов для разработки
-сделал отдельного сервис-юзера web-user и неймспейс web-namespace. 
+Создал нового сервис-юзера web-user и неймспейс web-namespace. 
+```yaml
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: web-user
+  namespace: web-namespace
+```
 <br>
 Ему сделал роль logs с правами на просмотр логов:
+
 ```yaml
 kind: Role
 apiVersion: rbac.authorization.k8s.io/v1
